@@ -21,14 +21,25 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_avatar_48dp" />
 
         <TextView
             android:id="@+id/createdTv"
             android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Hello World!" />
 
@@ -40,8 +51,9 @@
             android:textColor="#000000"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/createdTv"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
             tools:text="TextView" />
 
         <ImageButton
@@ -60,9 +72,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            tools:text="0"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contentTv" />
+            app:layout_constraintTop_toBottomOf="@+id/contentTv"
+            tools:text="0" />
 
         <ImageButton
             android:id="@+id/shareBtn"
@@ -81,9 +93,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            tools:text="0"
             app:layout_constraintEnd_toStartOf="@+id/shareBtn"
-            app:layout_constraintTop_toBottomOf="@+id/contentTv" />
+            app:layout_constraintTop_toBottomOf="@+id/contentTv"
+            tools:text="0" />
 
         <ImageButton
             android:id="@+id/commentBtn"
@@ -102,9 +114,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            tools:text="0"
             app:layout_constraintEnd_toStartOf="@+id/commentBtn"
-            app:layout_constraintTop_toBottomOf="@+id/contentTv" />
+            app:layout_constraintTop_toBottomOf="@+id/contentTv"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/authorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            tools:text="Author"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/createdTv" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

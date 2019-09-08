@@ -14,11 +14,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val post = Post(
-            1, "Vasya", "First post in our network!", "20 august 2019",
-            true, false, false,
-            50, 0, 2
+            1, "Netology", "First post in our network!", "20 august 2019",
+            false, false, true,
+            0, 8, 2
         )
         createdTv.text = post.created
+        authorTv.text = post.author
         contentTv.text = post.content
         likeQtyTv.text = if (post.likesQty > 0) {
             post.likesQty.toString()
